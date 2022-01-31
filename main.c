@@ -460,6 +460,7 @@ double root(const double x, const int n) {
 
 int main() {
     printf("%lf", root(12245.0, 16));
+    printf("%d", 123);
 }
 
 
