@@ -183,6 +183,12 @@
 		<Unit filename="C:/Users/DNS/Desktop/ler/last/libs/data_structures/unordered_array/unordered_array_set.h">
 			<Option target="data_structures"/>
 		</Unit>
+		<Unit filename="C:/Users/DNS/Desktop/ler/last/libs/data_structures/vector/vector.c">
+			<Option target="data_structures"/>
+		</Unit>
+		<Unit filename="C:/Users/DNS/Desktop/ler/last/libs/data_structures/vector/vector.h">
+			<Option target="data_structures"/>
+		</Unit>
 		<Unit filename="C:/Users/DNS/Desktop/ler/last/main.c">
 			<Option target="last"/>
 		</Unit>

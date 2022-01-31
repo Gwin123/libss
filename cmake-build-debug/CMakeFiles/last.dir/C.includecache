@@ -6,21 +6,23 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/DNS/Desktop/ler/last/main.c
-stdio.h
--
-time.h
--
-windows.h
--
-malloc.h
--
-stdlib.h
--
-stdio.h
--
-math.h
+C:/Users/DNS/Desktop/ler/last/libs/data_structures/vector/vector.h
+stdint.h
 -
 assert.h
 -
+memory.h
+-
+stdio.h
+-
+stdbool.h
+-
+
+C:/Users/DNS/Desktop/ler/last/main.c
+stdio.h
+-
+stdint.h
+-
+libs/data_structures/vector/vector.h
+C:/Users/DNS/Desktop/ler/last/libs/data_structures/vector/vector.h
 

@@ -18,3 +18,6 @@ libs/data_structures/CMakeFiles/data_structures.dir/unordered_array/unordered_ar
  ../libs/algorithms/array/array.h \
  ../libs/data_structures/unordered_array/unordered_array_set.c \
  ../libs/data_structures/unordered_array/unordered_array_set.h
+libs/data_structures/CMakeFiles/data_structures.dir/vector/vector.c.obj: \
+ ../libs/data_structures/vector/vector.c \
+ ../libs/data_structures/vector/vector.h

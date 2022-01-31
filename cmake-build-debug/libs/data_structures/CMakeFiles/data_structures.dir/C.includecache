@@ -6,15 +6,13 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/DNS/Desktop/ler/last/libs/data_structures/array_struct/array.c
-array.h
-C:/Users/DNS/Desktop/ler/last/libs/data_structures/array_struct/array.h
+C:/Users/DNS/Desktop/ler/last/libs/data_structures/vector/vector.c
+vector.h
+C:/Users/DNS/Desktop/ler/last/libs/data_structures/vector/vector.h
 malloc.h
 -
-locale.h
--
 
-C:/Users/DNS/Desktop/ler/last/libs/data_structures/array_struct/array.h
+C:/Users/DNS/Desktop/ler/last/libs/data_structures/vector/vector.h
 stdint.h
 -
 assert.h
