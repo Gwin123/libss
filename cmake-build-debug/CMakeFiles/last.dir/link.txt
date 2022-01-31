@@ -1,0 +1,3 @@
+"D:\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\last.dir/objects.a
+D:\Compulator\mingw32\bin\ar.exe cr CMakeFiles\last.dir/objects.a @CMakeFiles\last.dir\objects1.rsp
+D:\Compulator\mingw32\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\last.dir/objects.a -Wl,--no-whole-archive -o last.exe -Wl,--out-implib,liblast.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\last.dir\linklibs.rsp

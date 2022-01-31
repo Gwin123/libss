@@ -1,0 +1,2 @@
+D:\Compulator\mingw32\bin\ar.exe qc libalgorithms.a CMakeFiles/algorithms.dir/array/array.c.obj
+D:\Compulator\mingw32\bin\ranlib.exe libalgorithms.a

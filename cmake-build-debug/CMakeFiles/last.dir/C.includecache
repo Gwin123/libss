@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/DNS/Desktop/ler/last/main.c
+stdio.h
+-
+time.h
+-
+windows.h
+-
+malloc.h
+-
+stdlib.h
+-
+stdio.h
+-
+math.h
+-
+assert.h
+-
+
