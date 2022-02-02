@@ -83,11 +83,34 @@ void popBack(vector *v) {
     shrinkToFit(v);
 }
 
+int* atVector(vector *v, size_t index) {
+    if (index >= v->size) {
+        fprintf(stderr, "IndexError: a[%u] is not exists", index);
+        exit(1);
+    }
 
+    return v->data + index;
+}
 
+int* back(vector *v) {
+    if (v->size == 0) {
+        fprintf(stderr, "Vector is empty");
+        exit(1);
+    }
 
+    return v->data + v->size - 1;
 
+}
 
+int* front(vector *v) {
+    if (v->size == 0) {
+        fprintf(stderr, "Vector is empty");
+        exit(1);
+    }
+
+    return v->data;
+
+}
 
 
 
