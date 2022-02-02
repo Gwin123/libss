@@ -42,8 +42,7 @@ void clear(vector *v) {
 }
 
 void shrinkToFit(vector *v) {
-    free(v->data + v->size);
-    v->capacity = v->size;
+    reserve(v, v->size);
 }
 
 void deleteVector(vector *v) {
@@ -51,6 +50,42 @@ void deleteVector(vector *v) {
     clear(v);
     v->capacity = 1;
 }
+
+bool isEmpty(vector *v) {
+    return !v->size;
+}
+
+bool isFull(vector *v) {
+    return v->size == v->capacity;
+}
+
+int getVectorValue(vector *v, size_t i) {
+    return v->data[i];
+}
+
+void pushBack(vector *v, int x) {
+    if (v->capacity == 0)
+        reserve(v, 1);
+    else if (isFull(v))
+        reserve(v, v->capacity * 2);
+
+    v->data[v->size] = x;
+    (v->size)++;
+}
+
+void popBack(vector *v) {
+    if (isEmpty(v)) {
+        fprintf(stderr, "vector is empty");
+        exit(1);
+    }
+
+    v->size--;
+    shrinkToFit(v);
+}
+
+
+
+
 
 
 
