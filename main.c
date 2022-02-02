@@ -1,14 +1,4 @@
-#include <stdio.h>
-#include <stdint.h>
 #include "libs/data_structures/vector/vector.h"
-
-
-//int main() {
-//    volatile vector a = createVector(SIZE_MAX / 10);
-//
-//    printf("%llu", SIZE_MAX);
-//    return 0;
-//}
 
 void test_popBack_emptyVector() {
     vector v = createVector(0);
@@ -19,6 +9,7 @@ void test_popBack_emptyVector() {
     assert (v.size == 0);
     assert (v.capacity == 1);
 
+    deleteVector(&v);
 }
 
 void test_pushBack_notEmptyVector() {
@@ -31,7 +22,9 @@ void test_pushBack_notEmptyVector() {
     popBack(&v);
 
     assert(v.size == 4);
-    assert(v.capacity == 4);
+    assert(v.capacity == 5);
+
+    deleteVector(&v);
 }
 
 void test_atVector_notEmptyVector() {
@@ -39,9 +32,10 @@ void test_atVector_notEmptyVector() {
     for (int i = 1; i <= v.capacity; i++)
         pushBack(&v, i);
 
-    int* index = atVector(&v, 2);
+    int *index = atVector(&v, 2);
     assert(*index == 3);
 
+    deleteVector(&v);
 }
 
 void test_atVector_requestToLastElement() {
@@ -49,8 +43,10 @@ void test_atVector_requestToLastElement() {
     for (int i = 0; i < v.capacity; i++)
         pushBack(&v, i);
 
-    int* index = atVector(&v, 4);
+    int *index = atVector(&v, 4);
     assert(*index == 4);
+
+    deleteVector(&v);
 }
 
 void test_back_oneElementInVector() {
@@ -59,6 +55,8 @@ void test_back_oneElementInVector() {
 
     int *pBack = back(&v);
     assert(*pBack == 5);
+
+    deleteVector(&v);
 }
 
 void test_back_fullVector() {
@@ -66,9 +64,10 @@ void test_back_fullVector() {
     for (int i = 0; i < v.capacity; i++)
         pushBack(&v, i);
 
-    int* pBack = back(&v);
+    int *pBack = back(&v);
     assert(*pBack == 4);
 
+    deleteVector(&v);
 }
 
 void test_front_fullVector() {
@@ -76,8 +75,10 @@ void test_front_fullVector() {
     for (int i = 0; i < v.capacity; i++)
         pushBack(&v, i);
 
-    int* pFront = front(&v);
+    int *pFront = front(&v);
     assert(*pFront == 0);
+
+    deleteVector(&v);
 }
 
 void test_front_oneElementInVector() {
@@ -86,6 +87,8 @@ void test_front_oneElementInVector() {
 
     int *pFront = front(&v);
     assert(*pFront == 5);
+
+    deleteVector(&v);
 }
 
 int main() {

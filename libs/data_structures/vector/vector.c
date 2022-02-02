@@ -34,7 +34,6 @@ void reserve(vector *v, size_t newCapacity) {
     v->capacity = newCapacity;
     if (v->size > newCapacity)
         v->size = newCapacity;
-
 }
 
 void clear(vector *v) {
@@ -71,150 +70,44 @@ void pushBack(vector *v, int x) {
 
     v->data[v->size] = x;
     (v->size)++;
+
+    //не делать shrink из-за существенных проблем со временем
+}
+
+void elementAccessError(vector *v) {
+    if (isEmpty(v)) {
+        fprintf(stderr, "Vector is empty");
+        exit(1);
+    }
 }
 
 void popBack(vector *v) {
-    if (isEmpty(v)) {
-        fprintf(stderr, "vector is empty");
-        exit(1);
-    }
-
+    elementAccessError(v);
     v->size--;
-    shrinkToFit(v);
 }
 
-int* atVector(vector *v, size_t index) {
+void indexOutOfRangeError(vector *v, size_t index) {
     if (index >= v->size) {
         fprintf(stderr, "IndexError: a[%u] is not exists", index);
         exit(1);
     }
+}
+
+int *atVector(vector *v, size_t index) {
+    indexOutOfRangeError(v, index);
 
     return v->data + index;
 }
 
-int* back(vector *v) {
-    if (v->size == 0) {
-        fprintf(stderr, "Vector is empty");
-        exit(1);
-    }
+
+int *back(vector *v) {
+    elementAccessError(v);
 
     return v->data + v->size - 1;
-
 }
 
-int* front(vector *v) {
-    if (v->size == 0) {
-        fprintf(stderr, "Vector is empty");
-        exit(1);
-    }
+int *front(vector *v) {
+    elementAccessError(v);
 
     return v->data;
-
 }
-
-
-
-//
-//void appendArray(vector *array, const int value) {
-//    if (array->size == array->capacity) {
-//        array->data = realloc(array->data, array->capacity * 2 * sizeof(int));
-//        array->capacity *= 2;
-//    }
-//    array->data[array->size] = value;
-//    array->size++;
-//}
-//
-//
-//vector create_array_from_array(const int *array, size_t size) {
-//    vector newArray = create_array(0, 1);
-//    for (size_t i = 0; i < size; i++)
-//        appendArray(&newArray, array[i]);
-//
-//    return (vector) newArray;
-//}
-//
-//void printArray(vector array) {
-//    for (size_t i = 0; i < array.size; i++)
-//        printf("%d ", array.data[i]);
-//    printf("\n");
-//}
-//
-//void qsort_(vector *array, int first, int last) {
-//    if (first >= last)
-//        return;
-//
-//    int i = first;
-//    int j = last;
-//    int middle = array->data[(first + last) / 2];
-//
-//    while (i < j) {
-//        while (array->data[i] < middle)
-//            i++;
-//        while (array->data[j] > middle)
-//            j--;
-//        if (i <= j)
-//            swap(&array->data[i++], &array->data[j--]);
-//    }
-//    qsort_(array, first, j);
-//    qsort_(array, i, last);
-//
-//}
-//
-//vector qsortArray(vector array) {
-//    qsort_(&array, 0, array.size - 1);
-//
-//    return array;
-//}
-//
-//
-//vector add(vector array1, vector array2) {
-//    vector resultedArray = create_array(0, 1);
-//
-//    for (size_t i = 0; i < array1.size; i++) {
-//        appendArray(&resultedArray, array1.data[i]);
-//    }
-//
-//    for (size_t i = 0; i < array2.size; i++) {
-//        appendArray(&resultedArray, array2.data[i]);
-//    }
-//
-//    return (vector) resultedArray;
-//}
-//
-//int linearSearch(const vector array, const int x) {
-//    for (int i = 0; i < array.size; i++) {
-//        if (array.data[i] == x)
-//            return i;
-//    }
-//    return -1;
-//}
-//
-////возвращает кол-во элементов массива a размера size, удовлетворяющих фун-ции
-////предикату conditional
-//int countIf(const vector array, int (*conditional)(int)) {
-//    int count = 0;
-//    for (size_t i = 0; i < array.size; i++) {
-//        if (conditional(array.data[i]))
-//            count++;
-//    }
-//    return count;
-//}
-//
-//void deleteElementWithSavingOrder(vector *array, const size_t position) {
-//    for (size_t i = position + 1; i < array->size; i++)
-//        array->data[i - 1] = array->data[i];
-//    array->size -= 1;
-//}
-//
-//void deleteElementWithoutSavingOrder(vector *array, const size_t position) {
-//    array->data[position] = array->data[array->size - 1];
-//    array->size -= 1;
-//}
-//
-//void insertElement(int *a, size_t *size, const size_t position, const int x) {
-//    for (size_t i = *size - 1; i >= position; i++)
-//        a[i + 1] = a[i];
-//    a[position] = x;
-//    *size += 1;
-//}
-//
