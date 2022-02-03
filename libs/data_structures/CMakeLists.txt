@@ -16,4 +16,4 @@ add_library(
         List/list.h
 
         vector/vector.h
-        vector/vector.c)
+        vector/vector.c vector/vectorVoid.h vector/vectorVoid.c)

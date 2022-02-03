@@ -4,14 +4,18 @@
 #include "vector.h"
 #include <malloc.h>
 
+void memoryAllocateError(const int* data) {
+    if (data == NULL) {
+        fprintf(stderr, "bad alloc ");
+        exit(1);
+    }
+}
+
 vector createVector(size_t n) {
     int *data;
     if (n) {
         data = (int *) malloc(n * sizeof(int));
-        if (data == NULL) {
-            fprintf(stderr, "bad alloc ");
-            exit(1);
-        }
+        memoryAllocateError(data);
     } else
         data = NULL;
 
@@ -19,17 +23,12 @@ vector createVector(size_t n) {
 }
 
 void reserve(vector *v, size_t newCapacity) {
-    if (!newCapacity) {
-        free(v->data);
+    if (newCapacity) {
+        v->data = (int *) realloc(v->data, newCapacity * sizeof(int));
+        memoryAllocateError(v->data);
+    }
+    else
         v->data = NULL;
-        return;
-    }
-
-    v->data = (int *) realloc(v->data, newCapacity * sizeof(int));
-    if (v->data == NULL) {
-        fprintf(stderr, "bad alloc ");
-        exit(1);
-    }
 
     v->capacity = newCapacity;
     if (v->size > newCapacity)
