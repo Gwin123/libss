@@ -4,8 +4,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/data_structures.dir/bitset/bitset.c.obj"
   "CMakeFiles/data_structures.dir/ordered_array_set/ordered_array_set.c.obj"
   "CMakeFiles/data_structures.dir/unordered_array/unordered_array_set.c.obj"
-  "CMakeFiles/data_structures.dir/vector/vector.c.obj"
-  "CMakeFiles/data_structures.dir/vector/vectorVoid.c.obj"
   "libdata_structures.a"
   "libdata_structures.pdb"
 )
