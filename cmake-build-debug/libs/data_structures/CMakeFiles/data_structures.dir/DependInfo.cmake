@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "C:/Users/DNS/Desktop/ler/last/libs/data_structures/bitset/bitset.c" "C:/Users/DNS/Desktop/ler/last/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/bitset/bitset.c.obj"
   "C:/Users/DNS/Desktop/ler/last/libs/data_structures/ordered_array_set/ordered_array_set.c" "C:/Users/DNS/Desktop/ler/last/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/ordered_array_set/ordered_array_set.c.obj"
   "C:/Users/DNS/Desktop/ler/last/libs/data_structures/unordered_array/unordered_array_set.c" "C:/Users/DNS/Desktop/ler/last/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/unordered_array/unordered_array_set.c.obj"
+  "C:/Users/DNS/Desktop/ler/last/libs/data_structures/vector/vector.c" "C:/Users/DNS/Desktop/ler/last/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/vector/vector.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
