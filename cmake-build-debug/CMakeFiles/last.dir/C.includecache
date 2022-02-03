@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/DNS/Desktop/ler/last/libs/data_structures/vector/vector.h
+C:/Users/DNS/Desktop/ler/last/libs/data_structures/vector/vectorVoid.h
 stdint.h
 -
 assert.h
@@ -19,6 +19,6 @@ stdbool.h
 -
 
 C:/Users/DNS/Desktop/ler/last/main.c
-libs/data_structures/vector/vector.h
-C:/Users/DNS/Desktop/ler/last/libs/data_structures/vector/vector.h
+libs/data_structures/vector/vectorVoid.h
+C:/Users/DNS/Desktop/ler/last/libs/data_structures/vector/vectorVoid.h
 
