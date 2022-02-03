@@ -5,5 +5,5 @@ CMakeFiles/last.dir/libs/data_structures/bitset/bitset.c.obj: \
  ../libs/data_structures/bitset/bitset.c \
  ../libs/data_structures/bitset/bitset.h
 CMakeFiles/last.dir/main.c.obj: \
- ../libs/data_structures/vector/vectorVoid.h \
+ ../libs/data_structures/vector/vector.h \
  ../main.c

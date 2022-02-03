@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/DNS/Desktop/ler/last/libs/data_structures/vector/vectorVoid.c
-vectorVoid.h
-C:/Users/DNS/Desktop/ler/last/libs/data_structures/vector/vectorVoid.h
+C:/Users/DNS/Desktop/ler/last/libs/data_structures/vector/vector.c
+vector.h
+C:/Users/DNS/Desktop/ler/last/libs/data_structures/vector/vector.h
 malloc.h
 -
 
-C:/Users/DNS/Desktop/ler/last/libs/data_structures/vector/vectorVoid.h
+C:/Users/DNS/Desktop/ler/last/libs/data_structures/vector/vector.h
 stdint.h
 -
 assert.h
