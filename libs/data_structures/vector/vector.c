@@ -72,37 +72,40 @@ void pushBack(vector *v, int x) {
     v->size++;
 }
 
-void popBack(vector *v) {
+void elementAccessError(vector *v) {
     if (isEmpty(v)) {
-        fprintf(stderr, "vector is empty");
+        fprintf(stderr, "Vector is empty");
         exit(1);
     }
+}
+
+void popBack(vector *v) {
+    elementAccessError(v);
+
     v->size--;
 }
 
-int* atVector(vector *v, size_t index) {
+void indexOutOfRangeError(vector *v, size_t index) {
     if (index >= v->size) {
         fprintf(stderr, "IndexError: a[%u] is not exists", index);
         exit(1);
     }
+}
+
+int* atVector(vector *v, size_t index) {
+    indexOutOfRangeError(v, index);
 
     return v->data + index;
 }
 
 int* back(vector *v) {
-    if (v->size == 0) {
-        fprintf(stderr, "Vector is empty");
-        exit(1);
-    }
+    elementAccessError(v);
 
     return v->data + v->size - 1;
 }
 
 int* front(vector *v) {
-    if (v->size == 0) {
-        fprintf(stderr, "Vector is empty");
-        exit(1);
-    }
+    elementAccessError(v);
 
     return v->data;
 }
