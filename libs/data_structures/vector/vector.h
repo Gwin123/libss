@@ -50,5 +50,4 @@ int* back(vector *v);
 
 int* front(vector *v);
 
-
 #endif
